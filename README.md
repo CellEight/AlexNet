@@ -2,7 +2,7 @@
 
 ## Background
 
-This is a Pytorch implementation of the famous paper "ImageNet Classification with Deep Convolutional Neural Networks" by Alex Krizhevsky, Ilya Sutskever and Geoffrey E. Hinton or, as the architecture described within is more commonly know, AlexNet.
+This is a Pytorch implementation of the famous paper ["ImageNet Classification with Deep Convolutional Neural Networks"](https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf) by Alex Krizhevsky, Ilya Sutskever and Geoffrey E. Hinton or, as the architecture described within is more commonly know, AlexNet.
 
 ## The Architecture
 
