@@ -16,4 +16,11 @@ It would have been somewhat foolish to recreate this "hack" they implemented to 
 Rather than having two separate, parallel network paths I have merged the corresponding layers into singular layers of the equivalent size.
 I apologize if you were in search of an implementation of this particular part of their architecture, you shall not find it here!
 
-## 
+## Requirements
+
+All you need to run this code are the torch and torchvision libraries.
+To install these just run the following command in the root of your local copy of the repo.
+Do bear in mind though that you may wish to visit the pytorch website to download the most appropriate versions for your system.
+```
+sudo pip3 install -r ./requirements.txt
+```
