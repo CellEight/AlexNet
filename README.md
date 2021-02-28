@@ -16,6 +16,10 @@ It would have been somewhat foolish to recreate this "hack" they implemented to 
 Rather than having two separate, parallel network paths I have merged the corresponding layers into singular layers of the equivalent size.
 I apologize if you were in search of an implementation of this particular part of their architecture, you shall not find it here!
 
+## Dataset
+
+
+
 ## Requirements
 
 All you need to run this code are the torch and torchvision libraries.
