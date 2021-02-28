@@ -13,6 +13,7 @@ from model import AlexNet
 device = torch.device("cuda")
 
 def train(model, train_dl, test_dl, opt, loss_func, epochs):
+    """ train model using using provided datasets, optimizer and loss function """
     train_loss = [0 for i in range(epochs)]
     test_loss = [0 for i in range(epochs)]
     for epoch in range(epochs):
@@ -57,5 +58,3 @@ if __name__ == "__main__":
     f = open(f'model.pkl','wb')
     pickle.dump(model,f)
     f.close()
-
-
