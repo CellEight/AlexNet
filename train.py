@@ -6,6 +6,7 @@ from torch.utils.data import random_split
 from torchvision import datasets
 from torchvision import transforms
 import numpy as np
+import pickle
 from model import AlexNet
 
 # Select device to train on
@@ -47,7 +48,7 @@ if __name__ == "__main__":
     train_dl = torch.utils.data.DataLoader(train_data, batch_size=64, shuffle=True, num_workers=4)
     test_dl = torch.utils.data.DataLoader(test_data, batch_size=64, shuffle=True, num_workers=4)
     # Train Model
-    epochs = 10
+    epochs = 25
     model = AlexNet().to(device)
     loss_func = nn.CrossEntropyLoss()
     opt = optim.Adam(model.parameters(), lr=0.0001)
