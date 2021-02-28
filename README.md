@@ -16,9 +16,20 @@ It would have been somewhat foolish to recreate this "hack" they implemented to 
 Rather than having two separate, parallel network paths I have merged the corresponding layers into singular layers of the equivalent size.
 I apologize if you were in search of an implementation of this particular part of their architecture, you shall not find it here!
 
+I am also yet to implement local response normalization which is a additional feature of the architecture described in section 3.3 of the paper.
+The authors noted a around 2% improvement of the models performance when trained on CIFAR-10 when using this technique but despite this limited gain in performance I still plan to add it into the code in the near future.
+
 ## Dataset
 
+In the paper the authors train the model on the ImageNet dataset which is a huge data set of images of objects in 1000 different classes and was used as part of the ImageNet competition which until recently was the main forum of comparison between state of the art image recognition models.
+Although this model is absolutely capable of being applied to the full image net dataset I do not recommend this as it is VERY large, approximately 138GB.
+Instead, if you wish to train the model yourself, I recommend either using the sample data set in the `/data` directory of the repo which is just a small subset of 11 classes taken from the ImageNet data set or downloading your own subset using the [ImageNet Downloader](https://github.com/mf1024/ImageNet-Datasets-Downloader) project and then using imagemagick and the converter script included in this repo to get the images the correct size and training with that.
+If you really want to train with all of ImageNet you can find a few different methods of acquiring it [here](http://www.cloverio.com/download-imagenet/).
 
+## Pretrained Weights
+
+If you lack a graphics card on which to train the model or you just don't want to go through the hassle of training it yourself I have uploaded a `.pkl` file containing a serialized version of the model trained on the included dataset.
+You can find it [here](https://drive.google.com/file/d/1YKlLTGwb3yzXBqGW1FcbAZjbcsZvddEC/view?usp=sharing).
 
 ## Requirements
 
