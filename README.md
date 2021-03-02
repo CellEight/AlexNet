@@ -16,9 +16,6 @@ It would have been somewhat foolish to recreate this "hack" they implemented to 
 Rather than having two separate, parallel network paths I have merged the corresponding layers into singular layers of the equivalent size.
 I apologize if you were in search of an implementation of this particular part of their architecture, you shall not find it here!
 
-I am also yet to implement local response normalization which is a additional feature of the architecture described in section 3.3 of the paper.
-The authors noted a around 2% improvement of the models performance when trained on CIFAR-10 when using this technique but despite this limited gain in performance I still plan to add it into the code in the near future.
-
 ## Dataset
 
 In the paper the authors train the model on the ImageNet dataset which is a huge data set of images of objects in 1000 different classes and was used as part of the ImageNet competition which until recently was the main forum of comparison between state of the art image recognition models.
