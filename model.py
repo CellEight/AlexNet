@@ -19,10 +19,11 @@ class AlexNet(nn.Module):
         self.fc8 = nn.Linear(4096,1000)
         self.pool = nn.MaxPool2d(3,2)
         self.drop = nn.Dropout(0.5)
+        self.lrn = nn.LocalResponseNorm(size=5,alpha=10e-4,beta=0.75,k=2.0)
 
     def forward(self, x):
-        x = self.pool(F.relu(self.conv1(x)))
-        x = self.pool(F.relu(self.conv2(x)))
+        x = self.lrn(self.pool(F.relu(self.conv1(x))))
+        x = self.lrn(self.pool(F.relu(self.conv2(x))))
         x = F.relu(self.conv3(x))
         x = F.relu(self.conv4(x))
         x = self.pool(F.relu(self.conv5(x)))
